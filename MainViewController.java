@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import javax.swing.JOptionPane;
 
 import interfaces.AbstractComponent;
 import javafx.event.ActionEvent;
@@ -15,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.fxml.LoadException;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
@@ -67,7 +68,10 @@ public class MainViewController implements Initializable {
 			stage.show();
 		}
     	catch (LoadException e) {
-    		JOptionPane.showMessageDialog(null, "Please input data first");
+    		Alert alert = new Alert(AlertType.WARNING);
+    		alert.setTitle("Warning");
+    		alert.setContentText("Please input data first");
+    		alert.showAndWait();
     	}
     
 	}
@@ -85,7 +89,10 @@ public class MainViewController implements Initializable {
     		stage.show();
     	}
     	catch (LoadException e) {
-    		JOptionPane.showMessageDialog(null, "Please input data first");
+    		Alert alert = new Alert(AlertType.WARNING);
+    		alert.setTitle("Warning");
+    		alert.setContentText("Please input data first");
+    		alert.showAndWait();
     	}
     }
     
@@ -110,7 +117,10 @@ public class MainViewController implements Initializable {
 			stage.show();
     	} 
     	catch (RuntimeException e) {
-    		JOptionPane.showMessageDialog(null, "Please fill all parameters");
+    		Alert alert = new Alert(AlertType.WARNING);
+    		alert.setTitle("Warning");
+    		alert.setContentText("Please fill all parameters");
+    		alert.showAndWait();
     	}
     }
     
@@ -135,7 +145,10 @@ public class MainViewController implements Initializable {
     		stage.show();
     	} 
     	catch (RuntimeException e) {
-    		JOptionPane.showMessageDialog(null, "Please fill all parameters");
+    		Alert alert = new Alert(AlertType.WARNING);
+    		alert.setTitle("Warning");
+    		alert.setContentText("Please fill all parameters");
+    		alert.showAndWait();
     	}
     }
     
@@ -153,7 +166,10 @@ public class MainViewController implements Initializable {
     		stage.showAndWait();
     	}
     	catch (LoadException e) {
-    		JOptionPane.showMessageDialog(null, "Please input data first");
+    		Alert alert = new Alert(AlertType.WARNING);
+    		alert.setTitle("Warning");
+    		alert.setContentText("Please input data first");
+    		alert.showAndWait();
     	}
     }
 
